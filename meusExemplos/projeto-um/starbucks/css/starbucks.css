@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #240701;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#detalhe-externo,
+#circulo-verde,
+#textos {
+    transition: opacity .4s ease-in-out;
+}
+
+#inner-artwork { transition: fill .4s ease-in-out; }
+
+@media(max-width: 768px){
+    #detalhe-externo {
+        opacity: 0;
+    }
+}
+
+@media(max-width: 480px){
+    #circulo-verde,
+    #textos {
+        opacity: 0;
+    }
+
+    #inner-artwork {
+        fill: #067655;
+    }
+}
