@@ -15,7 +15,9 @@
     }
     .circle-1 {
         fill: red;
-        stroke-dasharray: 400;
+		fill-opacity: .3;
+        /*stroke-dasharray: 400;*/
+        stroke-dasharray: 10 20;
         stroke-dashoffset: 0;
     }
     .circle-2 {
@@ -30,7 +32,11 @@
 </style>
 
 <svg width="500" height="150" viewBox="0 0 500 150">
-    <circle class="circle circle-1" r="55" cx="200" cy="70"/>
+	<circle class="circle circle-1" r="55" cx="200" cy="70"/>
+    <circle class="circle circle-2" r="55" cx="250" cy="70"/>
+    <circle class="circle circle-3" r="55" cx="300" cy="70"/>
+
+
 </svg>
 
 </body>
