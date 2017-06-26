@@ -9,10 +9,39 @@ body {
     background: #240701;
 }
 
+/*
+ SEM HACK IE
 .container {
     max-width: 700px;
     margin: 0 auto;
+}*/
+
+/*
+    padding-top: 48%;
+    position: relative;
+    
+    dentro do container abaixo são hacks para reconhecer
+    no IE a responsividade na tag svg, técnica essa chamada Padding Hack
+*/
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    height: 0;
+    padding-top: 48%;
+    position: relative;
 }
+
+
+/* svg-resposive e um hack para o ie reconhecer a responsividade */
+
+.svg-responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
 
 #detalhe-externo,
 #circulo-verde,
