@@ -5,16 +5,40 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <svg width="500" height="350" style="border: solid 1px red">
+    <svg width="500" height="350">
       <circle id="circ" r="30" cx="50" cy="50" fill="blue" />
+      <rect id="rect" width="50" height="50" x="25" y="100" fill="orange" />
+      <rect id="rectg" width="50" height="50" x="25" y="175" fill="green" />
+      
 
-      <animate xlink:href="#circ"
-               attributeName="cx"
-               from="50" 
-               to="450"
-               dur="3s"
-               fill="freeze"/>
-    
+      <animate 
+                xlink:href="#circ"
+                attributeName="cx"
+                from="50"
+                to="450"
+                dur="3s"
+                fill="freeze"
+                begin="click"
+                id="animation-circle"/>
+
+      <animate 
+                xlink:href="#rect"
+                attributeName="x"
+                from="25"
+                to="425"
+                dur="3s"
+                fill="freeze"
+                begin="animation-circle.begin + 1s"/>
+      
+      <animate 
+                xlink:href="#rectg"
+                attributeName="y"
+                from="175"
+                to="0"
+                dur="1s"
+                fill="freeze"
+                begin="animation-circle.begin + 2s"/>
+
     </svg>
   </body>
 </html>
